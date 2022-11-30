@@ -51,8 +51,8 @@ This allows you to see if the channels you deleted are all clustered and if inte
 ### plot_group_deleted_chan_location
 
 <img src="images/group.png" alt="group level" align="center" width="400"/>  
-*Here you see for a group of 60 participants how often a channel got deleted, where P1 is a problem channel*  
-  
+*Here you see for a group of 60 participants how often a channel got deleted, where P1 is a problem channel*
+
 This function works as followed: `[EEG, group_del_channel]= plot_group_deleted_chan_location(EEG,group_del_channel,save_path)`  
 This function requires you to add `group_del_channel=[]` before you enter your participant loop.
 
