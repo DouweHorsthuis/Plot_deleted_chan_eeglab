@@ -21,7 +21,7 @@ This are 2 functions that, on an individual level, plot which channels are delet
 
 ## About the project
 
-As a part of building [a EEG pipeline that is scalable, well documented and reliable](https://github.com/DouweHorsthuis/EEG_to_ERP_pipeline_stats_R) we found the need to come up with a [quality analysis pipeline](https://github.com/DouweHorsthuis/Plot_deleted_chan_eeglab). These are both build while working with many members and former members of the [CNL at Albert Einstein College of Medicine](https://www.cognitiveneurolab.com/). This project resulted in some standalone functions that might be useful and should be made availible so not everyone needs to spend time on the same work. \*\*Feel free to use it, and if you can please leave a comment ([douwehorsthuis\@gmail.com](mailto:douwehorsthuis@gmail.com)).
+As a part of building [a EEG pipeline that is scalable, well documented and reliable](https://github.com/DouweHorsthuis/EEG_to_ERP_pipeline_stats_R) we found the need to come up with a [quality analysis pipeline](https://github.com/DouweHorsthuis/Plot_deleted_chan_eeglab). These are both build while working with many members and former members of the [CNL at Albert Einstein College of Medicine](https://www.cognitiveneurolab.com/). This project resulted in some standalone functions that might be useful and should be made availible so not everyone needs to spend time on the same work. **Feel free to use it, and if you can please leave a comment ([douwehorsthuis\@gmail.com](mailto:douwehorsthuis@gmail.com)).**
 
 One of the problems with EEG data is that due to the nature of data collection, it is not unlikely that channels that are close together malfunction at the same time. This might happen because the participant has an itch and touches the cap, because the participant might lean against something, because we overgell en bridge channels etc. On a individual level we want to make sure that we are not interpolating channels using bad channels. On a group level we want to make sure that our final ERP is not coming from the one channel that got deleted for most of our participants.
 
@@ -38,7 +38,7 @@ To download EEGLAB [go here](https://sccn.ucsd.edu/eeglab/download.php) and foll
 
 This is an example outcome:  
 <img src="images/individual.png" alt="individual" align="center" width="250"/>  
-*here you see that 4 electrodes are deleted for this participant*
+*Here you see that 4 electrodes are deleted for this participant*
 
 The function works as followed:  
 `[EEG]= plot_deleted_chan_location(EEG,save_path)`  
@@ -51,8 +51,7 @@ This allows you to see if the channels you deleted are all clustered and if inte
 ### plot_group_deleted_chan_location
 
 <img src="images/group.png" alt="group level" align="center" width="400"/>  
-*Here you see for a group of 60 participants how often a channel got deleted, where P1 is a problem channel*
-
+*Here you see for a group of 60 participants how often a channel got deleted, where P1 is a problem channel*  
   
 This function works as followed: `[EEG, group_del_channel]= plot_group_deleted_chan_location(EEG,group_del_channel,save_path)`  
 This function requires you to add `group_del_channel=[]` before you enter your participant loop.
