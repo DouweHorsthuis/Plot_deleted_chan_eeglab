@@ -77,9 +77,9 @@ end
 if isempty(group_del_channel)
     figure('Renderer', 'painters', 'Position', [10 10 375 225]); %this is just an empty figure
 elseif length(group_del_channel)==1
-    group_del_channel=[group_del_channel;group_del_channel]; %need 2 to have the function work, but will just plot 2 the same one
-    figure; topoplot(channel_amounts_deleted,group_del_channel, 'style', 'fill',  'electrodes', 'labelpoint', 'chaninfo', EEG.chaninfo);
-    group_del_channel=group_del_channel(1);
+    plot_chan_labels_2=[plot_chan_labels_2;plot_chan_labels_2]; %need 2 to have the function work, but will just plot 2 the same one
+    figure; topoplot([],plot_chan_labels_2, 'style', 'fill',  'electrodes', 'labelpoint', 'chaninfo', EEG.chaninfo);
+    plot_chan_labels_2=plot_chan_labels_2(1);
 else
     figure; topoplot([],plot_chan_labels_2, 'style', 'map',  'electrodes','labels', 'chaninfo', EEG.chaninfo,'maplimits' , [-2000 2000] );
     title(["Numbers represent how often that channel is deleted"])
